@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="index.css" />
+  <title>Self-introduction</title>
+</head>
+
+<body>
+<main>
+  <script>
+    function resize() {
+      let innerWidth = window.innerWidth;
+      let innerHeight = window.innerHeight;
+
+      const main = document.querySelector('main');
+
+      let mainWidth = main.offsetWidth;
+      let mainHeight = main.offsetHeight;
+
+      let widthDiff = innerWidth - mainWidth;
+      let heightDiff = innerHeight - mainHeight;
+
+      main.style.position = "absolute";
+
+      if (widthDiff > 0) {
+        main.style.left = '' + widthDiff / 2 + 'px';
+      } else {
+        main.style.left = '0px';
+      }
+      if (heightDiff > 0) {
+        main.style.top = '' + heightDiff / 2 + 'px';
+      } else {
+        main.style.top = '0px';
+      }
+    }
+
+    resize();
+    window.onresize = function () {resize();}
+  </script>
+
+  <div id="left_box">
+    <div id="picture">
+      <img src="main.jpg" alt="Your Picture">
+    </div>
+    <div id="self_introduction">
+                    <textarea name="self_introduction"
+                              readonly>Hello, My name is Hello World. This page is template for self-introduction. You can introduce yourself in this area. If this area is too small or big, please resize this area and write again. Text here. Text here. Text here. Text here. The end of this area that you can write is here.</textarea>
+    </div>
+  </div>
+  <div id="middle_box">
+    <div class="subtitle">
+      <p>Profile</p>
+    </div>
+    <div id="profile">
+      <table>
+        <tr>
+          <td class="profile_first_cell">Name.</td>
+          <td class="profile_second_cell">Hello World</td>
+        </tr>
+        <tr>
+          <td class="profile_first_cell">Work.</td>
+          <td class="profile_second_cell">HTML</td>
+        </tr>
+        <tr>
+          <td class="profile_first_cell">Education.</td>
+          <td class="profile_second_cell">CSS</td>
+        </tr>
+        <tr>
+          <td class="profile_first_cell">Tel.</td>
+          <td class="profile_second_cell">xxx-xxxx-xxxx</td>
+        </tr>
+        <tr>
+          <td class="profile_first_cell">E-mail.</td>
+          <td class="profile_second_cell">sample@xxxxx.com</td>
+        </tr>
+      </table>
+    </div>
+    <div class="subtitle">
+      <p>Work Experience</p>
+    </div>
+    <div id="work_experience">
+      <table>
+        <tr>
+          <td class="work_first_cell">yyyy.mm - yyyy.mm</td>
+          <td class="work_second_cell">Java</td>
+        </tr>
+        <tr>
+          <td class="work_first_cell">yyyy.mm - yyyy.mm</td>
+          <td class="work_second_cell">Dart</td>
+        </tr>
+        <tr>
+          <td class="work_first_cell">yyyy.mm - yyyy.mm</td>
+          <td class="work_second_cell">Python</td>
+        </tr>
+        <tr>
+          <td class="work_first_cell">yyyy.mm - yyyy.mm</td>
+          <td class="work_second_cell">Javascript</td>
+        </tr>
+        <tr>
+          <td class="work_first_cell">yyyy.mm - </td>
+          <td class="work_second_cell">C++</td>
+        </tr>
+      </table>
+    </div>
+    <div class="subtitle">
+      <p>Award</p>
+    </div>
+    <div id="award">
+      <table>
+        <tr>
+          <td class="award_first_cell">yyyy.mm.dd</td>
+          <td class="award_second_cell">〇〇 Award 1st</td>
+        </tr>
+        <tr>
+          <td class="award_first_cell">yyyy.mm.dd</td>
+          <td class="award_second_cell">△△ Award 2nd</td>
+        </tr>
+        <tr>
+          <td class="award_first_cell">yyyy.mm.dd</td>
+          <td class="award_second_cell">☆☆ Award 2nd</td>
+        </tr>
+        <tr>
+          <td class="award_first_cell">yyyy.mm.dd</td>
+          <td class="award_second_cell">□□ Award 3rd</td>
+        </tr>
+        <tr>
+          <td class="award_first_cell">yyyy.mm.dd</td>
+          <td class="award_second_cell">$$ Award 1st</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div id="right_box">
+    <p>Hello World / yy.mm.dd ~ </p>
+  </div>
+</main>
+</body>
+
+</html>
