@@ -1,10 +1,11 @@
-FROM ubuntu:latest
-LABEL authors="user"
+FROM openjdk:17-jdk-slim
 
-FROM openjdk:17.0.2-jdk
+RUN apt update && apt install -y xargs
 
 WORKDIR /web
 
-COPY target/
+COPY ./ /web
 
-ENTRYPOINT ["top", "-b"]
+RUN ./gradlew build --exclude-task test
+ 
+ENTRYPOINT ["java", "-jar", "./build/lib/mt_Web_Mono_Server-0.0.1-SNAPSHOT.jar"]
