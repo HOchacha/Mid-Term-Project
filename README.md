@@ -1,5 +1,6 @@
 # OSS Mid Term Project
 - Build Self-Introducing Webserver
+- Currently, Looking for changing docker image for java-springboot into Nginx (May 12, 2024)
 # How does it consist?
 - You can see the webpage in link[http://hochacha.com]
 - From now, I use Docker container for easy deployment by making some scripts.
